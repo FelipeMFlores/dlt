@@ -1,0 +1,21 @@
+origem mundo trave esquerda.
+
+pontos:
+(0;0;0)trave esquerda base  (125, 159)
+(0; 0; 2,44): trave esquerda topo (124, 128)
+(7,32; 0; 2,44): trave direita topo (159, 111)
+(-5,5; 5,5 ; 0): pequena area quina esquerda (160, 177)
+(5,5; 5,5; 0): pequena are quina direita (242, 132)
+(-16,5; 16,5; 0): grande area quina esquerda (250, 222)
+(16,5; 0; 0): grande area fundo direita (230, 107)
+
+matlab ;
+a = [ 0 0 0; 0 0 2.44; 7.32 0 2.44; -5.5 5.5 0; 5.5 5.5 0; -16.5 16.5 0; 16.5 0 0]
+a = a'
+a = [a; ones(1,7)]
+
+b = [125 159; 124 128; 159 111; 160 177; 242 132; 250 222; 230 107]
+b = b'
+b = [b; ones(1,7)]
+
+d = dlt(a,b)
