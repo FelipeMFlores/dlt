@@ -20,7 +20,7 @@ for i = 1:k
     line = line+1;
 end
 
-[~,~,V] = svd(A);
 
+[~,~,V] = svd(A);
 A = V(end, :) ./ V(end);
 A = reshape(A,3, 4);
