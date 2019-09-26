@@ -1,3 +1,4 @@
+function Q1()
 I = imread('maracana1.jpg');
 
 x = [ 0 0 0 1; 7.32 0 0 1; 0 0 2.44 1; 7.32 0 2.44 1;
@@ -34,4 +35,5 @@ while true
     end
     
     imshow(I);
+end
 end

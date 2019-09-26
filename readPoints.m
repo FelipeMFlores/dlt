@@ -1,11 +1,12 @@
-function pts = readPoints(image)
+function pts = readPoints(image, np)
 %returns the coord of the pixel clicked
-pts = zeros(2,1);
+pts = zeros(np, 2);
 imshow(image);   
 
-hold on;          
-[xi, yi, ~] = ginput(1);
-pts(1,1) = xi;
-pts(2,1) = yi;
-
+hold on;  
+for i = 1: np
+    [xi, yi, ~] = ginput(1);
+    pts(i,1) = xi;
+    pts(i,2) = yi;
+end
 end
